@@ -1,0 +1,14 @@
+{
+  "name": "churchofmemes-xposter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "dotenv": "^4.0.0",
+    "eventsource": "^1.0.5"
+  }
+}
