@@ -38,7 +38,7 @@ function createSlackMessage(data) {
   const statusId = uri.match(/statuses\/([0-9]+)/)[1]
   const statusUrl = `${process.env.MASTODON_URL}/web/statuses/${statusId}`
 
-  const defaultText = `New post from ${username} on Memestodon!\n<${statusUrl}>`
+  const defaultText = `New post from ${username} on Mastodon!\n<${statusUrl}>`
 
   // The presence of a `media_attachments` array denotes an uploaded or pasted image. Mastodon handles
   // creating a link tag for these by default, and so they're included in the unfurled message in Slack,
@@ -52,7 +52,7 @@ function createSlackMessage(data) {
 
   // Mastodon posts with no uploaded/pasted items and a link get an unfurl-friendly link appended
   if (!hasMediaItem && !!imageLinkMatch) {
-    return `New post from ${username} on Memestodon!\n<${statusUrl}>\n${imageLinkMatch[1]}`
+    return `New post from ${username} on Mastodon!\n<${statusUrl}>\n${imageLinkMatch[1]}`
   }
 
   return defaultText
