@@ -47,7 +47,7 @@ function createSlackMessage(data) {
   // so we skip creating an unfurl-friendly link here if it's not required.
   const hasMediaItem = data.media_attachments && data.media_attachments.length;
 
-  // This is in inelegant way of looking for expandable links in the Mastodon payload. By tacking
+  // This is an inelegant way of looking for expandable links in the Mastodon payload. By tacking
   // this link on to the end of the Slack message, Slack will unfurl the link. This lets us display
   // images in Slack when a link is posted on Mastodon.
   const imageLinkMatch = content.match(/href="([^"]*)"/);
