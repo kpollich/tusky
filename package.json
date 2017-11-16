@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node index.js",
     "format": "prettier **/*.js --write",
-    "lint": "eslint **/*.js"
+    "lint": "eslint **/*.js",
+    "precommit": "yarn format"
   },
   "lint-staged": {
     "*.js": ["prettier --write", "git add"]
