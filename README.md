@@ -2,6 +2,8 @@
 
 A Dockerized Node service for pushing new toots from a [Mastodon](https://api.slack.com/incoming-webhooks) instance to a Slack channel.
 
+![Tusky Logo](https://imgur.com/pP6upVz)
+
 ## Running tusky
 
 ### What you'll need
