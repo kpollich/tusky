@@ -5,7 +5,7 @@ const EventSource = require("eventsource");
 
 const STREAMING_ENDPOINT = `${
   process.env.MASTODON_URL
-}/api/v1/streaming/public`;
+}/api/v1/streaming/${process.env.ENDPOINT}`;
 const URL = `${STREAMING_ENDPOINT}?access_token=${process.env.ACCESS_TOKEN}`;
 
 const source = new EventSource(URL);

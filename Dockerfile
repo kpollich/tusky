@@ -8,4 +8,6 @@ RUN yarn install
 
 COPY . . 
 
+ENV ENDPOINT public
+
 CMD ["yarn", "start"]

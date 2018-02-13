@@ -18,7 +18,10 @@ Create a `.env` file in your `tusky` directory that defines the following enviro
 ACCESS_TOKEN=mastodon-access-token
 MASTODON_URL=https://some-mastodon-instance.com
 SLACK_WEBHOOK_ENDPOINT=https://hook.some-slack-instance.com
+ENDPOINT=public/local
 ```
+
+Default ENDPOINT is public, which will show messages from remote instances. 
 
 Once you have your environment variables set up, run `docker-compose up -d` to start the container. This will start a `tusky` Docker container in the background. After that you're all set - tusky will listen for new Mastodon toots and post to your configured Slack endpoint to push the toots into your Slack instance.
 
