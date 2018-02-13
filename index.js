@@ -36,9 +36,8 @@ function createSlackMessage(data) {
   const { uri, content } = data;
   const { username } = data.account;
 
-  // Build the "status" URL so Slack will properly unfurl our link later
-  const statusId = uri.match(/statuses\/([0-9]+)/)[1];
-  const statusUrl = `${process.env.MASTODON_URL}/web/statuses/${statusId}`;
+  // The url is provided in the payload
+  const statusUrl = data.url;
 
   const defaultText = `New post from ${username} on Mastodon!\n<${statusUrl}>`;
 
