@@ -41,6 +41,7 @@ function createSlackMessage(data) {
   const statusUrl = `${process.env.MASTODON_URL}/web/statuses/${statusId}`;
 
   const defaultText = `New post from ${username} on Mastodon!\n<${statusUrl}>`;
+  console.log(defaultText);
 
   // The presence of a `media_attachments` array denotes an uploaded or pasted image. Mastodon handles
   // creating a link tag for these by default, and so they're included in the unfurled message in Slack,
